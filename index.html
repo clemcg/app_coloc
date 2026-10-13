@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloc - Qui est là ?</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 Qui est à la coloc ?</h1>
+        
+        <div class="controls">
+            <button id="refreshBtn" class="btn">↻ Rafraîchir</button>
+        </div>
+        
+        <div id="roommatesList" class="roommates-list">
+            <!-- Les colocataires seront ajoutés ici dynamiquement -->
+        </div>
+        
+        <div class="add-guest">
+            <h3>➕ Ajouter un invité temporaire</h3>
+            <div class="guest-form">
+                <input type="text" id="guestName" placeholder="Nom de l'invité">
+                <input type="text" id="guestAddedBy" placeholder="Ajouté par (optionnel)">
+                <button id="addGuestBtn" class="btn">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Firebase Config (sera rempli par app.js) -->
+    <script src="app.js"></script>
+</body>
+</html>
